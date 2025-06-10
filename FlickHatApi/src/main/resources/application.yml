@@ -1,0 +1,20 @@
+spring:
+  profiles:
+    active: dev
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: maxvpire@gmail.com
+    password: uxwz eidq zzyt zqtr
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+
+server:
+  servlet:
+    context-path: /api/v1/

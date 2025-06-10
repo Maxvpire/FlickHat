@@ -1,0 +1,32 @@
+server:
+  port: 5050
+
+spring:
+  datasource:
+    username: neondb_owner
+    password: npg_ZXca5D2COgIr
+    url: jdbc:postgresql://ep-solitary-frog-a283lfjt-pooler.eu-central-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_ZXca5D2COgIr&sslmode=require
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+application:
+  security:
+    jwt:
+      secret-key: 404E635266556A586E3272357538782F413F442847284862504536756685970
+      expiration: 31556952000
+  mailing:
+    frontend:
+      activation-url: http://localhost:8080/activate-account
+  stripe:
+    api:
+      secret: sk_test_51RXauDKavOyVKXtQj1QhC70sCOgV8zHFXzAR3v1w5M6OpOuzVsETrAkPbRK6mnmPgIfAtPM1XyNGkSRPrzr71xbB00jRCdH4by
+      public: pk_test_51RXauDKavOyVKXtQClwWD3t3m3rJ6Ikkk4rfrmL0SFF7LaKulVFW1hATyseWYBTfuAuhqES3EGLmFKA0drZCPfFn0027oHFhqV
