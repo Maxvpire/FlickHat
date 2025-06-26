@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 @Builder
@@ -27,6 +28,9 @@ public class Movie {
     private Integer ageRating;
     private Integer duration;
 //    private Language languages;
+
+   @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL,  orphanRemoval = true)
+   private List<MovieStream> movieStreams;
    private String coverImageUrl;
    private String trailerUrl;
 }

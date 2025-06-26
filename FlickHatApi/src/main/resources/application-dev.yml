@@ -1,11 +1,8 @@
-server:
-  port: 5050
-
 spring:
   datasource:
-    username: neondb_owner
-    password: npg_ZXca5D2COgIr
-    url: jdbc:postgresql://ep-solitary-frog-a283lfjt-pooler.eu-central-1.aws.neon.tech/neondb?user=neondb_owner&password=npg_ZXca5D2COgIr&sslmode=require
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5444/flickhat
     driver-class-name: org.postgresql.Driver
 
   jpa:
